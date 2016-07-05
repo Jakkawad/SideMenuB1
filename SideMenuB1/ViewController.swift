@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import SideMenu
 
 class ViewController: UIViewController {
 
+    
+    func setupSideMenu() {
+        let menuRightNavigationController = UISideMenuNavigationController()
+        SideMenuManager.menuRightNavigationController = menuRightNavigationController
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupSideMenu()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
